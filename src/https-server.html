@@ -1,0 +1,57 @@
+<script type="text/javascript">
+    RED.nodes.registerType('https-server', {
+        category: 'input',
+        defaults: {
+            hostname: { value: "" },
+            port: { value: "" },
+            certificate: { value: "" },
+            key: { value: "" },
+            name: { value: "" }
+        },
+        credentials: {
+            username: { type: "text" },
+            password: { type: "password" }
+        },
+        inputs: 0,
+        outputs: 1,
+        icon: "www.png",
+        label: function () {
+            return this.name || "https-server";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="https-server">
+    <div class="form-row">
+        <label for="node-input-hostname"><i class="fa fa-server"></i> Listen on</label>
+        <input type="text" id="node-input-hostname" placeholder="127.0.0.1">
+    </div>
+    <div class="form-row">
+        <label for="node-input-port"><i class="fa fa-podcast"></i> Port</label>
+        <input type="text" id="node-input-port" placeholder="443">
+    </div>
+    <div class="form-row">
+        <label for="node-input-certificate"><i class="fa fa-certificate"></i> Certificate</label>
+        <input type="text" id="node-input-certificate" placeholder="/tmp/.ssl.private.pem">
+    </div>
+    <div class="form-row">
+        <label for="node-input-key"><i class="fa fa-key"></i> Private key</label>
+        <input type="text" id="node-input-key" placeholder="/tmp/.ssl/certificate.cert">
+    </div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-username"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-username" placeholder="Username">
+    </div>
+    <div class="form-row">
+        <label for="node-input-password"><i class="icon-tag"></i> Password</label>
+        <input type="text" id="node-input-password" placeholder="Password">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="https-server">
+    <p>A simple node that hold https requests</p>
+</script>
