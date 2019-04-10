@@ -27,9 +27,14 @@
     },
     "node-red": {
         "nodes": {
-            "https-server": "src/https-server.js"
+            "https-response": "src/lets-encrypt-response.js",
+            "lets-encrypt": "src/lets-encrypt.js"
         }
     },
-    "dependencies": {},
+    "dependencies": {
+        "spdy": "4.0.0",
+        "greenlock": "2.7.17",
+        "greenlock-store-fs": "3.0.0"
+    },
     "homepage": "https://github.com/yroffin/node-red-contrib-http-server"
 }
