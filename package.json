@@ -1,6 +1,6 @@
 {
     "name": "node-red-contrib-https-server",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "A Node-RED node for exposing an https server with let's encrypt.",
     "repository": {
         "type": "git",
